@@ -15,6 +15,6 @@ export default abstract class Day {
     }
 
     private getInput(path: string, isTest: boolean): string[] {
-        return fs.readFileSync(`${path}/${isTest ? 'ex' : 'act'}.txt`).toString().split('\n')
+        return fs.readFileSync(`${path}/${isTest ? 'ex' : 'act'}.txt`).toString().split('\n').map(i => i.trim());
     }
 }
